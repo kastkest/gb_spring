@@ -14,6 +14,14 @@ public class TestServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        resp.setContentType("text/html;charset=UTF-8");
+        resp.getWriter().printf("<html><body>");
+
+        for (int i = 0; i < 10; i++) {
+            resp.getWriter().printf("<h1>" + (new Product(i, "product" + i, (15 - i)/ 5)) + "</h1>");
+        }
+
+        resp.getWriter().printf("<html><body>");
+        resp.getWriter().close();
     }
 }
