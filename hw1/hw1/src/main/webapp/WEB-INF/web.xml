@@ -7,14 +7,14 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
   <display-name>Archetype Created Web Application</display-name>
 
 
-  <servlet>
-    <servlet-name>TestServlet</servlet-name>
-    <servlet-class>web_app_core.TestServlet</servlet-class>
-  </servlet>
+<!--  <servlet>-->
+<!--    <servlet-name>TestServlet</servlet-name>-->
+<!--    <servlet-class>web_app_core.TestServlet</servlet-class>-->
+<!--  </servlet>-->
 
-  <servlet-mapping>
-    <servlet-name>TestServlet</servlet-name>
-    <url-pattern>product_servlet</url-pattern>
-  </servlet-mapping>
+<!--  <servlet-mapping>-->
+<!--    <servlet-name>TestServlet</servlet-name>-->
+<!--    <url-pattern>/product</url-pattern>-->
+<!--  </servlet-mapping>-->
 
 </web-app>
