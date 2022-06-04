@@ -1,27 +1,42 @@
 package com.github.kastkest.gb_spring.hw2;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class Cart {
-    private List<String> productList;
 
-    public Cart() {
-        this.productList = new ArrayList<>();
+    private ProductRepository repository;
+    private List<Product> products;
+
+    @Autowired
+    public Cart(ProductRepository repository) {
+        this.repository = repository;
     }
 
-    public void add(String productTitle){
-        this.productList.add(productTitle);
+
+    @PostConstruct
+    public void init() {
+        this.products = new ArrayList<>();
     }
 
-    public void remove(Product productTitle) {
-        this.productList.removeIf(s -> s.equals(productTitle));
+    public void addToCardByProductId(Long productID) {
+        Product product = repository.findById(productID).get();
+        products.add(product);
+    }
+
+    public void removeByID(Long productId) {
+        this.products.removeIf(s -> s.getId().equals(productId));
     }
 
     @Override
     public String toString() {
         return "Cart{" +
-                "productList=" + productList +
+                "products=" + products +
                 '}';
     }
 }

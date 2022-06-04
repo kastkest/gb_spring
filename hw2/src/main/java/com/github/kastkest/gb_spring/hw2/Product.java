@@ -11,7 +11,16 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Product {
-    private long id;
+    private Long id;
     private String title;
-    private double price;
+    private Double price;
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
