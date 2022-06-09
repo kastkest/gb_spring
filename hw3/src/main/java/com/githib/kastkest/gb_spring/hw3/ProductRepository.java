@@ -17,12 +17,24 @@ public class ProductRepository {
         ));
     }
 
-    public List<Product> getAllProducts(){
+    public List<Product> getAllProducts() {
         return Collections.unmodifiableList(products);
+    }
+
+    public Product showProductById(Long id) {
+        return products.get(id)
     }
 
     public void addProducts(Product product) {
         products.add(product);
+    }
+
+    public void removeAllProduct() {
+        products.removeAll(products);
+    }
+
+    public void removeById(Long id) {
+        products.removeIf(l -> l.getId().equals(id));
     }
 
 
