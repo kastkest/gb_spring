@@ -2,6 +2,7 @@ package com.githib.kastkest.gb_spring.hw3;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -11,7 +12,8 @@ import java.util.Optional;
 public class ProductRepository {
     private List<Product> products;
 
-    public ProductRepository() {
+    @PostConstruct
+    public void init() {
         products = new ArrayList<>(List.of(
                 new Product(1L, "Milk"),
                 new Product(2L, "Cola")
@@ -35,7 +37,7 @@ public class ProductRepository {
         }
         products.add(product);
         Product lastAddedProduct = products.get(products.size() - 1);
-        lastAddedProduct.setId(maxID);
+        lastAddedProduct.setId(maxID+1L);
     }
 
 
