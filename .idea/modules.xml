@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/gb_spring.iml" filepath="$PROJECT_DIR$/.idea/gb_spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/hw1/hw1/hw1.iml" filepath="$PROJECT_DIR$/hw1/hw1/hw1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw3/hw3.iml" filepath="$PROJECT_DIR$/hw3/hw3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw3/src/main/main.iml" filepath="$PROJECT_DIR$/hw3/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw3/src/test/test.iml" filepath="$PROJECT_DIR$/hw3/src/test/test.iml" />
     </modules>
   </component>
 </project>
