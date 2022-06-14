@@ -35,7 +35,7 @@ public class ProductRepository {
                 maxID = items.getId();
             }
         }
-        product.setId(maxID);
+        product.setId(maxID+1);
         products.add(product);
 
     }
